@@ -12,23 +12,23 @@
     <link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Zpeed">
+    <meta name="application-name" content="SpeedTrackify">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Zpeed">
+    <meta name="apple-mobile-web-app-title" content="SpeedTrackify">
     <link rel="icon" sizes="192x192" href="images/touch/Zpeed_192.png">
     <link rel="apple-touch-icon" href="images/touch/Zpeed_192.png">
     <meta name="msapplication-TileImage" content="/images/touch/Zpeed_144.png">
     <meta name="msapplication-TileColor" content="#3f51b5">
     <meta name="theme-color" content="#3f51b5">
-    <meta property="og:title" content="Zpeed">
+    <meta property="og:title" content="SpeedTrackify">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.zpeed.in/images/touch/Zpeed_192.png">
     <meta property="og:url" content="index.html">
     <meta property="og:description" content="Check your real-time speed in km/h. No installation needed. Use it right away!">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="index.html">
-    <meta name="twitter:title" content="Zpeed">
-    <meta name="twitter:description" content="Check your real-time speed in km/h. No installation needed. Use it right away!">
+    <meta name="twitter:title" content="SpeedTrackify">
+    <meta name="twitter:description" content="Check your real-time speed in Km/h. No installation needed. Use it right away!">
     <meta name="twitter:image" content="https://www.zpeed.in/images/touch/Zpeed_192.png">
     <meta name="twitter:creator" content="@Soumya">
     <link rel="stylesheet" href="styles/main.css">
@@ -36,15 +36,15 @@
 
 <body>
     <div class="wrapper" id="sectionOne">
-        <h1>Speed<span>Trackify</span></h1>
+        <h1>SpeedTrackify</h1>
         <p>Check what's the current speed you are traveling online with this speedometer.</p>
         <p>Test how fast you're going in the train, car, or bus live.</p>
         <strong id="speed">...</strong>
         <p id="unit"></p>
         <div style="display:flex">
-            <button class="button" id="ms" aria-label="Meters per second">Meter/Sec</button>
-            <button class="button" id="mh" aria-label="Miles per hour">Miles/Hr</button>
-            <button class="button" id="kh" aria-label="Kilometers per hour">KM/Hr</button>
+            <button class="button" id="ms" aria-label="Meters Per Second">Meter/Sec</button>
+            <button class="button" id="mh" aria-label="Miles Per Hour">Miles/Hr</button>
+            <button class="button" id="kh" aria-label="Kilometers Per hour">Kilometer/Hr</button>
         </div>
     </div>
 
@@ -55,9 +55,11 @@
         </div>
         <div id="info">
             <div style="text-align: center;">
+                <center>
                 <p id="lat">Waiting for GPS...</p>
                 <p id="long">Make sure you are in GPS mode in location settings.</p>
                 <p id="error">Make sure you gave permissions to this website and the browser.</p>
+                </center>
             </div>
         </div>
     </div>
