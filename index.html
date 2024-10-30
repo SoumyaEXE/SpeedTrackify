@@ -34,42 +34,45 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
+<body>
     <div class="wrapper" id="sectionOne">
         <h1>Speed<span>X</span></h1>
-        <p>Check what's the current speed you are travelling online with this speedometer.</p>
-        <p>Test how fast you're going in the train, car or bus live.</p>
+        <p>Check what's the current speed you are traveling online with this speedometer.</p>
+        <p>Test how fast you're going in the train, car, or bus live.</p>
         <strong id="speed">...</strong>
         <p id="unit"></p>
         <div style="display:flex">
-            <button class="button" id="ms">Meter/Sec</button>
-            <button class="button" id="mh">Miles/Hr</button>
-            <button class="button" id=" kh">KM/Hr</button>
+            <button class="button" id="ms" aria-label="Meters per second">Meter/Sec</button>
+            <button class="button" id="mh" aria-label="Miles per hour">Miles/Hr</button>
+            <button class="button" id="kh" aria-label="Kilometers per hour">KM/Hr</button>
         </div>
     </div>
+
     <div class="wrapper wrapper-small">
         <div id="installer">
             <button class="button">Add to Home screen</button>
             <span class="tooltip"></span>
         </div>
         <div id="info">
-           <center>
-            <p id="lat">Waiting for GPS...</p>
-            <p id="long">Make sure you are in GPS mode in location settings.</p>
-            <p id="error">Make sure you gave permissions to this website and the browser.</p>
-          </center>
-          </div>
+            <div style="text-align: center;">
+                <p id="lat">Waiting for GPS...</p>
+                <p id="long">Make sure you are in GPS mode in location settings.</p>
+                <p id="error">Make sure you gave permissions to this website and the browser.</p>
+            </div>
+        </div>
     </div>
+
     <article class="wrapper wrapper-small" id="sectionTwo">
         <h2>SpeedX - Online Speedometer in your pocket</h2>
-        <p>SpeedX helps you find your real-time speed in km/h. No installation needed. Use it right away! Speedify is also available as progressive web app which you can use offline in latest browsers like Google Chrome.</p>
-        <p>If you find SpeedX useful, please <a href="https://github.com/SoumyaEXE">Soumyadeep Dey</a> On Github.</p>
-        <p>Some browsers and devices have support issues with geoLocation API. If you are not getting correct location, make sure you are in GPS mode in location settings and you gave location permission to both the Browser and Webpage. Or, try with another browser. :)</p>
+        <p>SpeedX helps you find your real-time speed in km/h. No installation needed. Use it right away! Speedify is also available as a progressive web app which you can use offline in the latest browsers like Google Chrome.</p>
+        <p>If you find SpeedX useful, please <a href="https://github.com/SoumyaEXE" target="_blank" rel="noopener noreferrer">Soumyadeep Dey</a> on GitHub.</p>
+        <p>Some browsers and devices have support issues with the geolocation API. If you are not getting the correct location, make sure you are in GPS mode in location settings and you have granted location permission to both the Browser and Webpage. Or, try with another browser. :)</p>
     </article>
+
     <article class="wrapper wrapper-small" id="sectionThree">
         <h3>Contact Us</h3>
-        <p>SpeedX is in beta state. Please let me know about issues at <a href="https://instagram.com/s0umy4_xd">@Soumya</a></p>
-      </article>
-
+        <p>SpeedX is in beta state. Please let me know about issues at <a href="https://instagram.com/s0umy4_xd" target="_blank" rel="noopener noreferrer">@Soumya</a></p>
+    </article>
 
     <noscript>
         <style type="text/css">
@@ -77,13 +80,11 @@
                 display: none;
             }
         </style>
-        <div class="noscriptmsg">You don't have JavaScript enabled. Without JS there's not much I can't do!.</div>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+        <div class="noscriptmsg">You don't have JavaScript enabled. Without JS, there's not much I can do!.</div>
     </noscript>
 
     <script src="scripts/main.min.js"></script>
-    
-    
+
     <script>
         /* Google font CSS File */
         var giftofspeed = document.createElement('link');
@@ -98,16 +99,15 @@
             navigator.serviceWorker.register('sw.js', {
                 scope: '/'
             })
-                .then(function(registration) {
+                .then(function (registration) {
                     console.log('Service Worker Registered');
                 });
 
-            navigator.serviceWorker.ready.then(function(registration) {
+            navigator.serviceWorker.ready.then(function (registration) {
                 console.log('Service Worker Ready');
             });
         }
     </script>
-
 
 </body>
 
