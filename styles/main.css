@@ -136,3 +136,31 @@ to {
     left: 15px;
     right: 15px;
 }
+
+.footer {
+    background-color: transparent;
+    text-align: center; 
+    padding: 20px;
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heart {
+    color: red;
+}
+
+.instagram-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.instagram-link:hover {
+    text-decoration: underline;
+    color: #e1306c;
+}
