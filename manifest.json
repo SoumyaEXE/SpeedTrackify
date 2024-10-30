@@ -1,0 +1,47 @@
+{
+  "name": "SpeedX",
+  "short_name": "SpeedX",
+  "lang": "en-US",
+  "permissions": ["storage"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "icons": [
+    {
+      "src": "images/touch/Zpeed_192.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "images/touch/Zpeed_192.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "images/touch/Zpeed_192.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "images/touch/Zpeed_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/touch/Zpeed_192.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "images/touch/Zpeed_192.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#3f51b5",
+  "theme_color": "#3f51b5",
+  "orientation": "portrait-primary"
+}

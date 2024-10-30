@@ -1,0 +1,138 @@
+.button, body {
+    font-family: "Poppins", sans-serif;
+}
+html, body {
+    margin: 0;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow-x: hidden;
+    height:100%;
+    padding:0;
+    margin:0;
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.button, a {
+    color: #fff;
+}
+main {
+    padding: 20px;
+}
+body, html {
+    height: 100%}
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+h2 {
+    font-size: 18px;
+}
+#installer {
+    opacity: 0;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: opacity 300ms ease-in-out;
+}
+#installer.available {
+    opacity: 1;
+}
+.button {
+    border: solid 1px #fff;
+    margin: 10px;
+    padding: 10px;
+    background-color: transparent;
+    font-size: .8em;
+}
+.button.active {
+    color: #3f51b5;
+    background-color: #fff;
+    box-shadow: -1px 4px 8px 3px #ffffff29;
+}
+.wrapper {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    width: calc(100% - 10px);
+    padding: 15px 5px 30px;
+    color: #eee;
+    min-height: 50vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.wrapper.wrapper-small {
+    width: 79%;
+    padding: 15px;
+    text-align: left;
+    min-height: 10vh;
+}
+.wrapper#sectionTwo a {
+    color: #fff;
+    font-weight: 600;
+}
+#speed {
+    font-size: 14em;
+}
+#speed.small {
+    font-size: 8em;
+}
+.scroll-btn {
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+    animation: downAnimation 1.5s infinite;
+    box-sizing: border-box;
+}
+.scroll-btn-link {
+    position: relative;
+}
+.meta-data {
+    margin-bottom: 0;
+}
+@keyframes downAnimation {
+    0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+}
+50% {
+    opacity: 1;
+}
+to {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+}
+}.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+}
+.modal .wrapper {
+    background: #3e4eb8;
+    background: #041169d4;
+    border: 1px solid #eee;
+    position: absolute;
+    bottom: 15px;
+    top: 20vh;
+    left: 15px;
+    right: 15px;
+}
