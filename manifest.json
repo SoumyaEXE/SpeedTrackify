@@ -1,6 +1,6 @@
 {
-  "name": "SpeedX",
-  "short_name": "SpeedX",
+  "name": "SpeedTrackify",
+  "short_name": "SpeedTrack",
   "lang": "en-US",
   "permissions": ["storage"],
   "content_security_policy": {
