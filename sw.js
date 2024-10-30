@@ -1,10 +1,10 @@
 /*
  *
- *  Zpeed
- *  Copyright 2017 Asim KT. All rights reserved.
+ *  SpeedTrackify.
+ *  Copyright 2024 Soumyadeep Dey. All rights reserved.
  *
  */
-var CACHE_NAME = 'zpeed';
+var CACHE_NAME = 'SpeedTrackify.';
 var FilesToCache = [
   '/',
   '/index.html',
