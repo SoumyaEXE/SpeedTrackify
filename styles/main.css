@@ -3,7 +3,9 @@
 }
 html, body {
     margin: 0;
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #0575E6;
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    background: linear-gradient(to right, #021B79, #0575E6); 
     overflow-x: hidden;
     height:100%;
     padding:0;
