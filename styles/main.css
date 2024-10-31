@@ -162,6 +162,13 @@ to {
     color: #fff;
 }
 
+ul {
+    list-style-type: disc;
+    padding-left: 20px; 
+    text-align: left;
+}
+
+
 .instagram-link:hover {
     text-decoration: underline;
     color: #e1306c;
