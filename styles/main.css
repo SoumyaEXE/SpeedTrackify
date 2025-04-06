@@ -1,36 +1,43 @@
 .button, body {
     font-family: "Poppins", sans-serif;
 }
+
 html, body {
     margin: 0;
-    background: #0575E6;
-    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-    background: linear-gradient(to right, #021B79, #0575E6); 
+    background: #1a1a1a;
+    background: -webkit-linear-gradient(to right, #000000, #1a1a1a);
+    background: linear-gradient(to right, #000000, #1a1a1a);
     overflow-x: hidden;
-    height:100%;
-    padding:0;
-    margin:0;
+    height: 100%;
+    padding: 0;
+    color: #fff; 
+}
+
 * {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
+
 .button, a {
-    color: #fff;
+    color: #ff0000;
 }
+
 main {
     padding: 20px;
 }
-body, html {
-    height: 100%}
+
 h1 {
     font-size: 2em;
     margin: 0;
-}
+    color: #ff0000; 
+
 h2 {
     font-size: 18px;
+    color: #e60000;
 }
+
 #installer {
     opacity: 0;
     bottom: 20px;
@@ -39,21 +46,26 @@ h2 {
     text-align: center;
     transition: opacity 300ms ease-in-out;
 }
+
 #installer.available {
     opacity: 1;
 }
+
 .button {
-    border: solid 1px #fff;
+    border: solid 1px #ff0000;
     margin: 10px;
     padding: 10px;
     background-color: transparent;
     font-size: .8em;
+    transition: all 0.3s ease;
 }
+
 .button.active {
-    color: #3f51b5;
-    background-color: #fff;
-    box-shadow: -1px 4px 8px 3px #ffffff29;
+    color: #000000;
+    background-color: #ff0000;
+    box-shadow: -1px 4px 8px 3px rgba(255, 0, 0, 0.2);
 }
+
 .wrapper {
     display: block;
     text-align: center;
@@ -61,66 +73,73 @@ h2 {
     width: 90%;
     width: calc(100% - 10px);
     padding: 15px 5px 30px;
-    color: #eee;
+    color: #fff;
     min-height: 50vh;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: column;
     flex-flow: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
+
 .wrapper.wrapper-small {
     width: 79%;
     padding: 15px;
     text-align: left;
     min-height: 10vh;
 }
+
 .wrapper#sectionTwo a {
-    color: #fff;
+    color: #ff0000;
     font-weight: 600;
 }
+
 #speed {
     font-size: 14em;
+    color: #ff0000; 
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
+
 #speed.small {
     font-size: 8em;
 }
+
 .scroll-btn {
     position: absolute;
     top: 0;
     left: -12px;
     width: 24px;
     height: 24px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-left: 1px solid #ff0000;
+    border-bottom: 1px solid #ff0000;
     transform: rotate(-45deg);
     animation: downAnimation 1.5s infinite;
     box-sizing: border-box;
 }
+
 .scroll-btn-link {
     position: relative;
 }
+
 .meta-data {
     margin-bottom: 0;
 }
+
 @keyframes downAnimation {
     0% {
-    transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
 }
-50% {
-    opacity: 1;
-}
-to {
-    transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-}
-}.modal {
+
+.modal {
     position: fixed;
     left: 0;
     right: 0;
@@ -128,10 +147,10 @@ to {
     top: 0;
     z-index: 1;
 }
+
 .modal .wrapper {
-    background: #3e4eb8;
-    background: #041169d4;
-    border: 1px solid #eee;
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid #ff0000; 
     position: absolute;
     bottom: 15px;
     top: 20vh;
@@ -141,7 +160,7 @@ to {
 
 .footer {
     background-color: transparent;
-    text-align: center; 
+    text-align: center;
     padding: 20px;
     position: relative;
 }
@@ -150,26 +169,25 @@ to {
     margin: 0;
     font-size: 18px;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
 }
 
 .heart {
-    color: red;
+    color: #ff0000;
 }
 
 .instagram-link {
     text-decoration: none;
-    color: #fff;
+    color: #ff0000;
 }
 
 ul {
     list-style-type: disc;
-    padding-left: 20px; 
+    padding-left: 20px;
     text-align: left;
 }
 
-
 .instagram-link:hover {
     text-decoration: underline;
-    color: #e1306c;
+    color: #ff3333;
 }
