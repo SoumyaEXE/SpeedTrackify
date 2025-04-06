@@ -682,23 +682,79 @@
       margin-bottom: 0.8rem;
     }
 
-    @media (max-width: 768px) {
-        #speed {
-          font-size: 6rem;
-        }
-        
-        #unit {
-          font-size: 1.5rem;
-        }
-      }
-      
-      @media (max-width: 480px) {
-        #speed {
-          font-size: 5rem;
-        }
-        
-        #unit {
-          font-size: 1.2rem;
+   /* Mobile Optimization */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .wrapper {
+    padding: 2rem 1rem;
+    width: 95%;
+  }
+
+  .glass-panel,
+  .info-panel,
+  .speed-container {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  #speed {
+    font-size: 5rem;
+  }
+
+  #unit {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.4rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  ul li {
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+
+  .scroll-btn-link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .scroll-btn {
+    left: 6px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
         }
       }
   }
