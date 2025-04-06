@@ -1,13 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta charset="utf-8">
-    <title>SpeedTrackify | An Online Speedometer</title>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Check your real-time speed in km/h using GPS without any native app installation">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, user-scalable=1">
+    <title>SpeedTrackify | Instant GPS Speedometer</title>
+    <meta name="description" content="Instantly track your speed in km/h, mph, or m/s using GPS technology - no downloads required!">
     <link rel="canonical" href="index.html">
     <link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
@@ -18,115 +16,109 @@
     <link rel="icon" sizes="192x192" href="images/touch/Zpeed_192.png">
     <link rel="apple-touch-icon" href="images/touch/Zpeed_192.png">
     <meta name="msapplication-TileImage" content="/images/touch/Zpeed_144.png">
-    <meta name="msapplication-TileColor" content="#3f51b5">
-    <meta name="theme-color" content="#3f51b5">
-    <meta property="og:title" content="SpeedTrackify">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="SpeedTrackify - Instant GPS Speedometer">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.zpeed.in/images/touch/Zpeed_192.png">
     <meta property="og:url" content="index.html">
-    <meta property="og:description" content="Check your real-time speed in km/h. No installation needed. Use it right away!">
+    <meta property="og:description" content="Track your real-time speed instantly with this browser-based GPS speedometer. No downloads needed!">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="index.html">
-    <meta name="twitter:title" content="SpeedTrackify">
-    <meta name="twitter:description" content="Check your real-time speed in Km/h. No installation needed. Use it right away!">
+    <meta name="twitter:title" content="SpeedTrackify - Instant GPS Speedometer">
+    <meta name="twitter:description" content="Track your real-time speed instantly with this browser-based GPS speedometer. No downloads needed!">
     <meta name="twitter:image" content="https://www.zpeed.in/images/touch/Zpeed_192.png">
     <meta name="twitter:creator" content="@Soumya">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
 </head>
 
 <body>
-    <div class="wrapper" id="sectionOne">
-        <h1><u>SpeedTrackify.</u></h1>
-        <p>Check what's the current speed you are traveling online with this speedometer.</p>
-        <p>Test how fast you're going in the train, car, or bus live.</p>
-        <strong id="speed">...</strong>
-        <p id="unit"></p>
-        <div style="display:flex">
-            <button class="button" id="ms" aria-label="Meters Per Second">Meter/Sec</button>
-            <button class="button" id="mh" aria-label="Miles Per Hour">Miles/Hr</button>
-            <button class="button" id="kh" aria-label="Kilometers Per hour">Kilometer/Hr</button>
+    <header class="wrapper" id="sectionOne">
+        <h1>SpeedTrackify</h1>
+        <p class="tagline">Your instant GPS speedometer in any browser</p>
+        <p class="subtitle">Perfect for tracking speed during any journey — on foot, bicycle, car, bus, or train</p>
+        
+        <div class="speed-container">
+            <strong id="speed" aria-live="polite">...</strong>
+            <p id="unit" aria-label="Speed unit"></p>
         </div>
-    </div>
+        
+        <div class="button-group">
+            <button class="button" id="kh" aria-label="Kilometers per hour">km/h</button>
+            <button class="button" id="mh" aria-label="Miles per hour">mph</button>
+            <button class="button" id="ms" aria-label="Meters per second">m/s</button>
+            <!-- New Calibrate Button Added Here -->
+            <button class="button" id="calibrate" aria-label="Calibrate">Calibrate</button>
+        </div>
+        
+        <a href="#sectionTwo" class="scroll-btn-link" aria-label="Scroll to learn more">
+            <span class="scroll-btn"></span>
+        </a>
+    </header>
 
-    <div class="wrapper wrapper-small">
-        <div id="installer">
-            <button class="button">Add to Home screen</button>
-            <span class="tooltip"></span>
-        </div>
-        <div id="info">
-            <div style="text-align: center;">
-                <center>
-                <b><p id="lat">Waiting for GPS...</p></b>
-                <b><p id="long">Make sure you are in GPS mode in location settings.</p></b>
-                <b><p id="error">Make sure you gave permissions to this website and the browser.</p></b>
-                </center>
+    <main>
+        <section class="wrapper wrapper-small" id="gps-info">
+            <div id="installer" aria-hidden="true">
+                <button class="button">Install App</button>
+                <span class="tooltip" role="tooltip"></span>
             </div>
-        </div>
-    </div>
+            <div id="info" class="meta-data info-panel">
+                <p id="lat"><strong>Latitude:</strong> Waiting for GPS signal...</p>
+                <p id="long"><strong>Longitude:</strong> Please enable location services.</p>
+                <p id="error"><strong>Important:</strong> Grant location permissions to use this tool.</p>
+            </div>
+        </section>
 
-    <article class="wrapper wrapper-small" id="sectionTwo">
-        <h2><u><center>SpeedTrackify - Online Speedometer In Your Pocket.</center></u></h2>
-        <i><p>SpeedTrackify helps you find your real-time speed in km/h. No installation needed. Use it right away!</p></i>
-        <h3><u><center>How To Install Web App?</center></u></h3>
-        <i>SpeedTrackify is also available as a progressive web app which you can use offline in the latest browsers like Google Chrome.</i><br>
-        <u><b>Here's How To Install It:</b></u><br>
-        <ul>
-        <li>Click On 3 Dots At Top Right Corner.</li>
-        <li>Click On "Add To Home Screen"</li>
-        <li>Thats It. Enjoy!</li>
-        </ul>
-        <h3><center><u>Liked It? So Drop A Follow!</center></u></h3>
-        <i><p>If you find SpeedTrackify useful, please follow <a href="https://github.com/SoumyaEXE" target="_blank" rel="noopener noreferrer">Soumyadeep Dey</a> on GitHub.</p></i>
-        <h3><u><center>Please Check It Before Using.</center></u></h3>
-        <em><p>Note: Some browsers and devices have support issues with the Geolocation API. If you are not getting the correct location, make sure you are in GPS mode in location settings and you have granted location permission to both the Browser and Webpage. Or, try with another browser.</p></em>
-    </article>
+        <section class="wrapper wrapper-small" id="sectionTwo">
+            <h2>How to Use SpeedTrackify</h2>
+            <p class="feature-intro">Get instant speed readings anywhere, anytime — no app downloads required!</p>
+            
+            <h3>Install for Offline Use</h3>
+            <p>Access SpeedTrackify even without internet:</p>
+            <ul>
+                <li>Open the menu (3 dots) in your browser</li>
+                <li>Select "Add to Home Screen" or "Install"</li>
+                <li>Access SpeedTrackify directly from your home screen</li>
+            </ul>
+            
+            <h3>Troubleshooting Tips</h3>
+            <p>For best performance:</p>
+            <ul>
+                <li>Ensure your device's GPS is enabled</li>
+                <li>Grant location permissions when prompted</li>
+                <li>Use in open areas for better GPS accuracy</li>
+                <li>Try a different browser if you experience issues</li>
+            </ul>
+        </section>
 
-    <article class="wrapper wrapper-small" id="sectionThree">
-        <h3><u>Contact Us At</u></h3>
-        <center><p>Please let me know about issues at <a href="https://instagram.com/s0umy4_xd" target="_blank" rel="noopener noreferrer">@Soumya</a></p></center>
-    </article>
+        <section class="wrapper wrapper-small" id="sectionThree">
+            <h3>Connect With Us</h3>
+            <p>Found SpeedTrackify helpful? Follow the developer <a href="https://github.com/SoumyaEXE" target="_blank" rel="noopener noreferrer">Soumyadeep Dey</a> on GitHub.</p>
+            <p>Report issues or send feedback to <a href="https://instagram.com/f1r3w4ll" target="_blank" rel="noopener noreferrer">@Soumya</a> on Instagram.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Created with <span class="heart">♥</span> by <a href="https://instagram.com/f1r3w4ll" class="instagram-link" target="_blank" rel="noopener noreferrer">Soumya</a></p>
+    </footer>
 
     <noscript>
-        <style type="text/css">
-            .wrapper {
-                display: none;
-            }
+        <style>
+            .wrapper { display: none; }
         </style>
-        <div class="noscriptmsg">You don't have JavaScript enabled. Without JS, there's not much I can do!.</div>
+        <div class="noscriptmsg">SpeedTrackify requires JavaScript to function. Please enable JavaScript in your browser settings.</div>
     </noscript>
 
     <script src="scripts/main.min.js"></script>
-
     <script>
-        /* Google font CSS File */
-        var giftofspeed = document.createElement('link');
-        giftofspeed.rel = 'stylesheet';
-        giftofspeed.href = 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap';
-        giftofspeed.type = 'text/css';
-        var godefer = document.getElementsByTagName('link')[0];
-        godefer.parentNode.insertBefore(giftofspeed, godefer);
-
-        /* Service worker code */
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js', {
-                scope: '/'
-            })
-                .then(function (registration) {
-                    console.log('Service Worker Registered');
-                });
+            navigator.serviceWorker.register('sw.js', { scope: '/' })
+                .then(reg => console.log('Service Worker Registered'))
+                .catch(err => console.error('Service Worker Error:', err));
 
-            navigator.serviceWorker.ready.then(function (registration) {
-                console.log('Service Worker Ready');
-            });
+            navigator.serviceWorker.ready.then(reg => console.log('Service Worker Ready'));
         }
     </script>
-
-    <footer class="footer">
-    <p>
-        Made With <span class="heart">&hearts;</span> By <a href="https://instagram.com/s0umy4_xd" class="instagram-link">Soumya</a>
-    </p>
-</footer>
-
 </body>
-
 </html>
