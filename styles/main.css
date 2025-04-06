@@ -589,172 +589,41 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    :root {
-      --glow-spread: 12px;
+ @media (max-width: 768px) {
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    
-    h1 {
-      font-size: 2em;
+  
+    .button-group button:not(#calibrate) {
+      flex: 0 1 auto;
     }
-    
-    h2 {
-      font-size: 1.5em;
-    }
-    
-    h3 {
-      font-size: 1.2em;
-    }
-    
-    .wrapper {
-      width: 95%;
-      padding: 2rem 0.5rem;
-    }
-    
-    .wrapper.wrapper-small {
-      width: 90%;
-    }
-    
-    .wrapper::before {
-      width: 80px;
-    }
-    
-    .speed-container {
-      padding: 1.5rem;
-      min-width: auto;
-      width: 90%;
-    }
-    
-    #speed {
-      font-size: 6rem;
-    }
-    
-    #unit {
-      font-size: 1.5rem;
-    }
-    
-    .button {
-      padding: 0.8rem 1.4rem;
-      font-size: 0.9rem;
+  
+
+    #calibrate {
+      order: 100;         
+      flex-basis: 100%;  
+      margin-top: 10px;   
     }
   }
   
-  @media (max-width: 480px) {
-    :root {
-      --glow-spread: 8px;
-    }
-    
-    h1 {
-      font-size: 1.8em;
-    }
-    
-    .tagline {
-      font-size: 1em;
-    }
-    
-    .subtitle {
-      font-size: 0.9em;
-    }
-    
-    .speed-container {
-      padding: 1.2rem;
-    }
-    
-    #speed {
-      font-size: 5rem;
-    }
-    
-    #unit {
-      font-size: 1.2rem;
-    }
-    
-    .button {
-      padding: 0.7rem 1.2rem;
-      font-size: 0.85rem;
-    }
-    
-    .info-panel {
-      padding: 1.2rem;
-    }
-    
-    ul li {
-      padding-left: 1.5rem;
-      margin-bottom: 0.8rem;
-    }
+        @media (max-width: 480px) {
+            .button-group {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+            }
 
-   /* Mobile Optimization */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  h3 {
-    font-size: 1.2em;
-  }
-
-  .wrapper {
-    padding: 2rem 1rem;
-    width: 95%;
-  }
-
-  .glass-panel,
-  .info-panel,
-  .speed-container {
-    padding: 1.5rem;
-    border-radius: 16px;
-  }
-
-  #speed {
-    font-size: 5rem;
-  }
-
-  #unit {
-    font-size: 1.5rem;
-  }
-
-  .button {
-    font-size: 0.95rem;
-    padding: 0.8rem 1.4rem;
-  }
-
-  .button-group {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  ul li {
-    font-size: 0.95rem;
-    padding-left: 1.5rem;
-  }
-
-  .tagline {
-    font-size: 1rem;
-  }
-
-  .subtitle {
-    font-size: 0.9rem;
-  }
-
-  .footer {
-    padding: 1rem;
-  }
-
-  .scroll-btn-link {
-    width: 36px;
-    height: 36px;
-  }
-
-  .scroll-btn {
-    left: 6px;
-    width: 18px;
-    height: 18px;
-  }
-}
-
+            .button-group button:not(#calibrate) {
+              flex: 0 1 auto;
+            }
+            #calibrate {
+              order: 100;        
+              flex-basis: 100%;     
+              margin-top: 10px;    
+            }
+          }  
         }
       }
   }
